@@ -1,0 +1,28 @@
+---
+title: "`r paste('Gapminder data for ', params$country)`"
+output: html_document
+params:
+  country: New Zealand
+---
+  
+
+```{r, include = FALSE}
+library(gapminder)
+library(tidyverse)
+
+this_country <- filter(gapminder, country == params$country)
+this_continent <- filter(gapminder, continent == this_country$continent[[1]])
+```
+
+```{r, echo = FALSE}
+this_country %>% 
+  ggplot(aes(year, lifeExp)) + 
+  geom_point() +
+  geom_line(aes(group = country), this_continent, colour = "grey80") + 
+  geom_line() + 
+  labs(
+    x = "Year", 
+    y = "Life expectancy"
+  )
+```
+

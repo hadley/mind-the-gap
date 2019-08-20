@@ -1,6 +1,10 @@
 # Mind the gap
 
-Data from the [gapminder](https://github.com/jennybc/gapminder) package spread across multiple files to provide data ingest practice.
+Data from the [gapminder](https://github.com/jennybc/gapminder) package spread across multiple files to provide data ingest and parameterised report practice.
+
+```R
+usethis::use_course("http://bit.ly/30lAoSe")
+```
 
 ## Data generation
 
