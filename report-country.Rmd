@@ -5,7 +5,6 @@ params:
   country: New Zealand
 ---
   
-
 ```{r, include = FALSE}
 library(gapminder)
 library(tidyverse)
